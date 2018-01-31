@@ -1,1 +1,1 @@
-sudo service sshd status
+service sshd status

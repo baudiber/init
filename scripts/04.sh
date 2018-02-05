@@ -1,5 +1,8 @@
 #!/bin/bash
 
+if [ ! -f /tmp/md5list ]; then
+	md5sum /etc/crontab > /tmp/md5list
+fi
 tmpmd5=/tmp/md5list
 dir=/etc/crontab
 newmd5=$(md5sum "$dir")

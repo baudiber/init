@@ -11,6 +11,6 @@ if grep -q "$newmd5" $tmpmd5 ; then
 else
 	echo "/etc/crontab was modified" | mail -s "INTRUDER ALERT" root
 fi
-script04="/home/baudiber/SCRIPT/04.sh"
+script04="/home/baudiber/Documents/init/scripts/04"
 cronjob04="0 0 * * * $script04"
 (crontab -l | grep -v -F "$script04" ; echo "$cronjob04") | crontab -
